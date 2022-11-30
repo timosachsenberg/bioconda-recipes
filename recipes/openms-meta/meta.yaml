@@ -39,7 +39,6 @@ requirements:
       - qt
       - libsvm
       - coinmp
-      - sqlite
 
 test:
   commands:
@@ -69,7 +68,6 @@ outputs:
           - qt
           - libsvm
           - coinmp
-          - sqlite
     build:
       run_exports:
           - {{ pin_compatible('llvm-openmp', max_pin='x.x') }} # [osx]
@@ -111,7 +109,6 @@ outputs:
         - qt
         - libsvm
         - coinmp
-        - sqlite
       run:
         - {{ pin_subpackage('libopenms', exact=True) }}
         - {{ pin_compatible('llvm-openmp', max_pin='x.x') }} # [osx]
